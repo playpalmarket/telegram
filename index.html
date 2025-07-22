@@ -224,7 +224,8 @@
           const productName = amountEl.textContent.trim();
           const productPrice = priceEl.textContent.trim();
           
-          const messageTemplate = `Username Telegram : \n\nPesanan : *${productName}*\nHarga : *${productPrice}*`;
+          // Template pesan tanpa format bold (*)
+          const messageTemplate = `Username Telegram : \n\nPesanan : ${productName}\nHarga : ${productPrice}`;
           const encodedMessage = encodeURIComponent(messageTemplate);
           const whatsappURL = `https://wa.me/${adminNumber}?text=${encodedMessage}`;
 
